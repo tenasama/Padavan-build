@@ -68,7 +68,7 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_ENABLE_FAT/d' .config #删除配置项FAT文件系统支持
         sed -i '/CONFIG_FIRMWARE_ENABLE_EXFAT/d' .config #删除配置项EXFAT文件系统支持
         sed -i '/CONFIG_FIRMWARE_INCLUDE_QOS/d' .config #删除配置项QOS功能
-#        sed -i '/CONFIG_FIRMWARE_WIFI2_DRIVER/d' .config #删除2.4G驱动
+        #sed -i '/CONFIG_FIRMWARE_WIFI2_DRIVER/d' .config #删除2.4G驱动
         sed -i 's/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=n/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=y/g' .config
         ######################################################################
         #以下选项是定义你需要的功能（y=集成,n=忽略），重新写入到.config文件
@@ -100,7 +100,7 @@ jobs:
         echo "CONFIG_FIRMWARE_ENABLE_FAT=y" >> .config #开启FAT文件系统支持
         echo "CONFIG_FIRMWARE_ENABLE_EXFAT=y" >> .config #开启EXFAT文件系统支持
         echo "CONFIG_FIRMWARE_INCLUDE_QOS=y" >> .config #开启QOS功能
-#        echo "CONFIG_FIRMWARE_WIFI2_DRIVER=3.0" >> .config #2.4G驱动改为3.0
+        #echo "CONFIG_FIRMWARE_WIFI2_DRIVER=3.0" >> .config #2.4G驱动改为3.0
         #########################################################################################
         #自定义添加其它功能请参考源码configs/templates/目录下的config文件。按照上面的格式添加即可
         #格式如下：
